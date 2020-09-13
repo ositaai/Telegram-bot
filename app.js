@@ -1,5 +1,5 @@
 
-
+require('dotenv').config()
 const Telegraf = require('telegraf')
 const session = require('telegraf/session')
 const Stage = require('telegraf/stage')
@@ -184,6 +184,9 @@ ctx.reply('Keyboard',keyboard.draw(),'<i>bro i am comming am still writing the c
       Markup.callbackButton('🏠 Menu', 'menu'),
     ])))
 })
+
+
+// here we incremenntr the value once the user click the link
 
 bot.hears('⛏💰💰mine', async (ctx) => {
   ctx.scene.enter('tof-quiz-wizard')
